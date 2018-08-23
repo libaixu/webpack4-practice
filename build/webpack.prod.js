@@ -13,11 +13,13 @@ module.exports = merge(baseConfig, {
     devtool: 'source-map',
     optimization: {
         minimizer: [
+            //压缩css后默认压缩js失效，手动压缩js
             new UglifyJsPlugin({
                 cache: true,
                 parallel: true,
                 sourceMap: true
             }),
+            //压缩css
             new OptimizeCSSAssetsPlugin()
         ]
     },
