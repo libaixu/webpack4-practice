@@ -1,0 +1,29 @@
+{
+  "name": "webpack-multi-page-app-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config build/webpack.dev.js --progress",
+    "build": "webpack --config build/webpack.prod.js --progress -p"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "style-loader": "^0.22.1",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "vue": "^2.5.17"
+  }
+}

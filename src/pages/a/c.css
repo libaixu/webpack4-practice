@@ -1,0 +1,12 @@
+body {
+    background: gray;
+}
+#app {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    transition: all 1s;
+}
+#app:hover {
+    width: 200px;
+}
