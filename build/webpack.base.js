@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function getHtmlTemplate(name, title) {
     return {
-        template: path.resolve(__dirname, '../src/view/index.html'),
+        template: path.resolve(__dirname, '../src/view/' + name + '.html'),
         filename: 'views/' + name + '.html',
         chunks: ['vendor', 'common', name],
         inject: true,
@@ -29,6 +29,25 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'js/[name].js',
         chunkFilename: 'js/[name].chunk.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                include: path.resolve(__dirname, '../src'),
+                use: [
+                    'eslint-loader'
+                ]
+            },
+            {
+                test: /\.js$/,
+                include: path.resolve(__dirname, '../src'),
+                use: [
+                    'babel-loader'
+                ]
+            }
+        ]
     },
     resolve: {
         extensions: ['.js']

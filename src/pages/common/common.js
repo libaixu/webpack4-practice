@@ -1,5 +1,5 @@
 const common = () => {
-    console.log('I AM COMMON======================JS');
+    console.log('I AM COMMON======================JS')
 }
 
-common();
+common()

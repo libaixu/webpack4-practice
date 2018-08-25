@@ -20,7 +20,7 @@ module.exports = merge(baseConfig, {
                 sourceMap: true
             }),
             //压缩css
-            new OptimizeCSSAssetsPlugin()
+            new OptimizeCSSAssetsPlugin({})
         ]
     },
     output: {
@@ -31,9 +31,11 @@ module.exports = merge(baseConfig, {
         rules: [
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader'
+                    'css-loader',
+                    'postcss-loader'
                 ]
             }
         ]
@@ -42,7 +44,7 @@ module.exports = merge(baseConfig, {
         new CleanWebpackPlugin(['dist'], {root: path.resolve(__dirname, '..')}),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
-            chunkFilename: 'css/[id].[content].css'
+            chunkFilename: 'css/[id].[contenthash].css'
         })
     ]
 })

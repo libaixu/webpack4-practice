@@ -10,7 +10,8 @@ module.exports = merge(baseConfig, {
     devServer: {
         host: '0.0.0.0',
         port: 8080,
-        hot: true
+        hot: true,
+        overlay: true
     },
     module: {
         rules: [
@@ -18,7 +19,13 @@ module.exports = merge(baseConfig, {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    'postcss-loader'
                 ]
             }
         ]
