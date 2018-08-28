@@ -82,11 +82,11 @@ module.exports = {
                 common: {
                     name: 'common',
                     chunks: 'all',
-                    minSize: 0,//超过多少大小才会单独抽取打包，默认为300k，这里为了看效果，设为0
+                    minSize: 300,//超过多少大小才会单独抽取打包，默认为300k，这里为了看效果，设为0
                     minChunks: 2,//被引用几次才单独抽取，默认为1
                     priority: 0//单独打包优先级，数越大优先级越高
                 },
-                vender: {
+                vendor: {
                     test: /[\\/]node_modules[\\/]/,
                     name: 'vendor',
                     chunks: 'all',

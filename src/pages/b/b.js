@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import Vue from 'vue'
+import 'babel-polyfill'
 import '../common/common'
 import './b.css'
 // 我是b的注释啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
