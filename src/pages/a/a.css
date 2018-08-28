@@ -1,8 +1,10 @@
 body {
-    background: gray;
+    background-color: gray;
+    background-image: url('../../asset/big.jpg');
 }
 #app {
-    background: blue;
+    background-color: blue;
+    background-image: url('../../asset//small.png');
     display: flex;
     width: 100px;
     height: 100px;
