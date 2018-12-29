@@ -100,4 +100,5 @@ module.exports = {
         new HtmlWebpackPlugin(getHtmlTemplate('b', 'B页面')),
         new HtmlWebpackPlugin(getHtmlTemplate('c', 'C页面'))
     ]
+    // 我加一行
 }
